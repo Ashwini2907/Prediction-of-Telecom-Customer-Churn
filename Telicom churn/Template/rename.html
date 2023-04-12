@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prediction Form</title>
+</head>
+<body background="ima.jpeg" style="background-repeat:no-repeat; background-size:100% 100%" text='white'>
+<h1>
+<b>
+<i>
+<font size=15>
+<center>Prediction Form</center>
+</font>
+</i>
+</b>
+</h1>
+<div style="background-color:white">
+<hr>
+<hr></div>
+<h2> Enter the details of customer</h2>
+<h4> 
+<form action="{{url_for('predict')}}" method="post">
+<center>
+<table>
+<tr>
+<td>Gender: 
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label><br>
+<tr>
+<td>Senior_Citizen<td>:&nbsp&nbsp&nbsp<input type='text' name='Senior_Citizen' placeholder='Enter 1 for no 0 for yes' required='required'/><br>
+</tr>
+<tr>
+<td>Dependents<td>:&nbsp&nbsp&nbsp<input type='text' name='Dependents' placeholder='Enter 0 for no 1 for yes' required='required' /><br>
+</tr>
+<tr>
+<td>Partner<td>:&nbsp&nbsp&nbsp<input type='text' name='Partner' placeholder='Enter 0 for no 1 for yes' required='required' /><br>
+</tr>
+<tr>
+<td>Tenure<td>:&nbsp&nbsp&nbsp<input type='text' name='Tenure' placeholder='Enter 0 for 1 for 71' required='required' /><br>
+</tr>
+<tr>
+<td>Phone_Service<td>:&nbsp&nbsp&nbsp<input type='text' name='Phone_Service' placeholder='Enter 0 for no 1 for yes' required='required' /><br>
+</tr>
+<tr>
+<td>Multiple_Lines<td>:&nbsp&nbsp&nbsp<input type='text' name='Multiple_Lines' placeholder='Enter 0 for no 1 for yes 2 for No phone service' required='required' /><br>
+</tr>
+<tr>
+<td>Online_Security<td>:&nbsp&nbsp&nbsp<input type='text' name='Online_Security' placeholder='Enter 0 for no 1 for yes 2 for No internet service' required='required'/><br>
+</tr>
+<tr>
+<td>Online_Backup<td>:&nbsp&nbsp&nbsp<input type='text' name='Online_Backup' placeholder=' Enter 0 for no 1 for yes 2 for No internet service ' required='required' /><br>
+</tr>
+<tr>
+<td>Streaming_TV<td>:&nbsp&nbsp&nbsp<input type='text' name='Streaming_TV' placeholder='Enter 0 for no 1 for yes 2 for No internet service  ' required='required' /><br>
+</tr>
+<tr>
+<td>Streaming_Movies<td>:&nbsp&nbsp&nbsp<input type='text' name='Streaming_Movies' placeholder=' Enter 0 for no 1 for yes 2 for No internet service ' required='required'/><br>
+</tr>
+<tr>
+<td>Paper_less_Billing<td>:&nbsp&nbsp&nbsp<input type='text' name='Paper_less_Billing' placeholder=' Enter 0 for no 1 for yes ' required='required' /><br>
+</tr>
+<tr>
+<td>Churn<td>:&nbsp&nbsp&nbsp<input type='text' name='Churn' placeholder=' Enter 0 for no 1 for yes ' required='required' /><br>
+</tr>
+<tr>
+<td>Online Backup<td>:&nbsp&nbsp&nbsp<input type='text' name='Online Backup' placeholder=' Enter 0 for yes 1 for no ' required='required'/><br>
+</tr>
+<tr>
+<td>Contract<td>:&nbsp&nbsp&nbsp<input type='text' name='Contract' placeholder=' Enter 0 for Month-to-month 1 for One year 2 for Two year ' required='required' /><br>
+</tr>
+<tr>
+<td>Internet_Service<td>:&nbsp&nbsp&nbsp<input type='text' name='Internet_Service' placeholder=' Enter 0 for DSL 1 for Fiber optic 2 for No' required='required' /><br>
+</tr>
+<tr>
+<td>Payment_Method<td>:&nbsp&nbsp&nbsp<input type='text' name='Payment_Method' placeholder=' Enter 0 for Electronic check 1 for Credit card (automatic) 2 for Bank transfer (automatic) 3 for Mailed check ' required='required' /><br>
+</tr>
+<tr>
+<td>Device_Protection<td>:&nbsp&nbsp&nbsp<input type='text' name='Device_Protection' placeholder=' Enter 0 for no 1 for yes 2 for No internet service' required='required' /><br>
+</tr>
+<tr>
+<td>Tech_Support<td>:&nbsp&nbsp&nbsp<input type='text' name='Tech_Support' placeholder=' Enter 0 for no 1 for yes 2 for No internet service' required='required' /><br>
+</tr>
+<tr>
+<td><br><br><center>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-primary btn-block btn-large">Predict</center></button>
+</tr>
+</form>
+</h4>
+</table>
+</center>
+<h2>
+<b>
+{{ prediction_text }}
+</b>
+</h2>
+</body>
+</html>
